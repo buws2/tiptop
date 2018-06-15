@@ -6,30 +6,31 @@
     <title>TipTopBreil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
-    <script src="assets/css/main.js"></script>
 </head>
 <body>
-
+    
     <header>
-    <h2><a href="#">TipTop</a></h2>
-    <nav>
-        <li><a href="#">Uber uns</a></li>
-        <li><a href="#">Angebot</a></li>
-        <li><a href="#">Kontakt</a></li>
-    </nav>
+        <h2><a href="#">TipTop</a></h2>
+        <nav>
+            <li><a href="#about">Uber uns</a></li>
+            <li><a href="#offers">Angebot</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </nav>
     </header>
+    
+    <div class="always"><a href="#">Up</a></div>
 
     <section class="hero">
         <div class="background-image" style="background-image: url(assets/img/main5.jpg);"></div>
         <div class="hero-content-area">
             <h1>TipTop Breil</h1>
-            <h3>Facility Management mit Hirn, Herz, und Hand</h3>
-            <a href="#" class="btn">Jetzt goennen!</a>
+            <h3>Facility Management mit Verstand</h3>
+            <a href="#offers" class="btn">Jetzt mehr erfahren!</a>
         </div>
     </section>
-
+    
     <section class="about">
-        <h3 class="title">Uber uns</h3>
+        <h3 class="title" id="about">Uber uns</h3>
         <p>
             Spicy jalapeno bacon ipsum dolor amet eu bresaola filet mignon strip steak frankfurter. Venison ground round pariatur, occaecat chuck proident ball tip chicken landjaeger ullamco nostrud corned beef cillum prosciutto pork chop. Quis ut excepteur, tempor ad pariatur meatloaf kielbasa bacon consectetur bresaola alcatra nostrud. Qui pork chop tail, in bresaola ut consequat hamburger ball tip cow quis ground round. Cupim incididunt voluptate, filet mignon buffalo leberkas shoulder flank shank alcatra sunt ut.
         </p>
@@ -41,9 +42,9 @@
             <li class="small" style="background-image: url(assets/img/main7.jpg);"></li>
         </ul>
     </section>
-
+    
     <section class="offers">
-        <h3 class="title">Angebot</h3>
+        <h3 class="title" id="offers">Angebot</h3>
         <p>
             Spicy jalapeno bacon ipsum dolor amet eu bresaola filet mignon strip steak frankfurter. Venison ground round pariatur, occaecat chuck proident ball tip chicken landjaeger ullamco nostrud corned beef cillum prosciutto pork chop. Quis ut excepteur, tempor ad pariatur meatloaf kielbasa bacon consectetur bresaola alcatra nostrud. Qui pork chop tail, in bresaola ut consequat hamburger ball tip cow quis ground round. Cupim incididunt voluptate, filet mignon buffalo leberkas shoulder flank shank alcatra sunt ut.
         </p>
@@ -67,20 +68,53 @@
             </li>
         </ul>
     </section>
-
+    
     <section class="contact">
-        <h3 class="title">Kontakt</h3>
-        <p>Wir freuen uns auf Ihren Anruf!</p>
+        <h3 class="title" id="contact">Kontakt</h3>
+        <p>Schreiben Sie uns noch heute order rufen Sie uns an wenn Sie Wert auf eine saubere Wohnung legen. Wir freuen uns auf Sie!</p>
+        <hr>
+        <p>Holen Sie sich ein unverbindliches Angebot.</p>
+<!--        <form method="POST" action="https://us-central1-mailer-service-207217.cloudfunctions.net/function-1"> -->
         <form>
-            <input type="email" placeholder="Email">
-            <a href="#" class="btn">Erfahren Sie mehr!</a>
+            <input name="name" type="text" placeholder="Name" required>
+            <input name="from" type="email" placeholder="Email" required>
+            <input name="subject" type="text" placeholder="Betreff">
+            <textarea name="message"></textarea>
+            <button type="submit btn">Senden!</button>
         </form>
+        <ul class="grid">
+            <li>
+                <h4>Öffnungszeiten</h4>
+                <p>
+                    24/7
+                </p>
+            </li>
+            <li>
+                <h4>Adresse</h4>
+                <p>
+                    TipTop Breil Facility Management <br/>
+                    Via Capitasch 9 <br/>
+                    CH-7165 Breil/Brigels
+                </p>
+            </li>
+            <li>
+                <h4>Telefon</h4>
+                <p>Mobil: +44 ------- <br/> Festnetz: +44 ------</p>
+            </li>
+<!--            <li>
+                <h4>Email</h4>
+                <p>
+                    <a class="btn" href="mailto:tiptopbreil@gmail.com">Schreiben Sie Uns!</a>
+                </p>
+            </li> -->
+        </ul>
     </section>
-
+    
     <footer>
         <p></p>
         <p></p>
         <a href="">Impressum</a>
     </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
