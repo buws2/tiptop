@@ -52,3 +52,60 @@ var getScrollTopDocument = function()
     return document.documentElement.scrollTop + document.body.scrollTop;
 };
 })();
+
+var always = document.querySelector(".always");
+window.addEventListener("scroll", (event) => {
+    if (window.scrollY > 900 && always.classList.contains("invisible")){
+        always.classList.toggle("invisible");
+    }
+    if (window.scrollY < 900 && !always.classList.contains("invisible")){
+        always.classList.toggle("invisible");
+    }
+})
+
+$("form").submit((event) => {
+    var data = {
+        'name': $('input[name=name]').val(),
+        'from': $('input[name=from]').val(),
+        'subject': $('input[name=subject]').val(),
+        'message': $('textarea[name=message]').val()
+    }
+    console.log(data);
+    // var mailer_url = "https://us-central1-mailer-service-207217.cloudfunctions.net/function-1";
+    
+
+    event.preventDefault();
+});
+
+// var btn = document.querySelector("form button");
+// btn.addEventListener("click", sendMsg);
+
+// function sendMsg(event) {
+//     event.preventDefault();
+
+//     var mailer_url = "https://us-central1-mailer-service-207217.cloudfunctions.net/function-1";
+//     var data = {
+//         from: event.path[1][1].value,
+//         subject: event.path[1][2].value,
+//         message: event.path[1][0].value + " hat folgende Nachricht hinterlassen:\n\n" + event.path[1][2].value
+//     }
+//     fetch(mailer_url,{
+//         method: 'POST',
+//         mode: 'no-cors',
+//         body: JSON.stringify(data),
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     }).then(res => res.json)
+//     .catch(error => console.error('Error:', error))
+//     .then(response => console.log('Success:', response));
+// }
+
+
+// window.addEventListener("keydown", (event) => {
+//     var key = Number(event.key);
+//     if("ArrowRight" === event.key){
+
+//     }
+//     console.log("ArrowRight" === event.key);
+// });
