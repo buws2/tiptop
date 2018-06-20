@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700);
-@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+@import url(assets/css/fontawesome-all.min.css);
 
 * {
     margin: 0;
