@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700);
-@import url(assets/css/fontawesome-all.min.css);
 
 * {
     margin: 0;
@@ -304,6 +303,7 @@ section:not(.hero):nth-child(even) {
     color: #fff;
     opacity: 1;
     transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 .contact form button:hover {
@@ -339,15 +339,44 @@ section:not(.hero):nth-child(even) {
 
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     background-color: rgb(0, 37, 139);
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
+}
+
+footer p {
+    padding-right: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#impressum {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 400px;
+    background: rgb(0, 37, 139);
+    margin: 0 20px 0 auto;
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 400ms;
+}
+
+.impress {
+    opacity: 1 !important;
 }
 
 @media (max-width: 1000px) {
     footer {
         flex-direction: column;
+    }
+
+    footer p {
+        padding-right: 0;
     }
 }

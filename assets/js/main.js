@@ -77,6 +77,12 @@ $("form").submit((event) => {
     event.preventDefault();
 });
 
+var impress = document.querySelector("footer p");
+var impressPanel = document.getElementById("impressum");
+impress.addEventListener("click", (event) => {
+    impressPanel.classList.toggle("impress");
+});
+
 // var btn = document.querySelector("form button");
 // btn.addEventListener("click", sendMsg);
 
