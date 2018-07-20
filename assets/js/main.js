@@ -64,23 +64,22 @@ window.addEventListener("scroll", (event) => {
 })
 
 $("form").submit((event) => {
-    var data = {
-        'name': $('input[name=name]').val(),
-        'from': $('input[name=from]').val(),
-        'subject': $('input[name=subject]').val(),
-        'message': $('textarea[name=message]').val()
-    }
-    console.log(data);
-    // var mailer_url = "https://us-central1-mailer-service-207217.cloudfunctions.net/function-1";
-    
-
     event.preventDefault();
-});
-
-var impress = document.querySelector("footer p");
-var impressPanel = document.getElementById("impressum");
-impress.addEventListener("click", (event) => {
-    impressPanel.classList.toggle("impress");
+    var data = {
+        name: $('input[name=name]').val(),
+        from: $('input[name=from]').val(),
+        subject: $('input[name=subject]').val(),
+        message: $('textarea[name=message]').val()
+    }
+    var mailer_url = "https://us-central1-mailer-service-207217.cloudfunctions.net/function-1";
+    // console.log(data);
+    $.post(mailer_url, data)
+    .done(function(){
+        console.log("Success!")
+    })
+    .fail(function(){
+        console.log("Error");
+    })
 });
 
 // var btn = document.querySelector("form button");
@@ -106,12 +105,3 @@ impress.addEventListener("click", (event) => {
 //     .catch(error => console.error('Error:', error))
 //     .then(response => console.log('Success:', response));
 // }
-
-
-// window.addEventListener("keydown", (event) => {
-//     var key = Number(event.key);
-//     if("ArrowRight" === event.key){
-
-//     }
-//     console.log("ArrowRight" === event.key);
-// });
