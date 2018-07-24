@@ -82,6 +82,9 @@ $("form").submit((event) => {
     })
 });
 
+var tel_btn = document.getElementById("telbtn");
+
+
 // var btn = document.querySelector("form button");
 // btn.addEventListener("click", sendMsg);
 
