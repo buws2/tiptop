@@ -82,7 +82,19 @@ $("form").submit((event) => {
     })
 });
 
-var tel_btn = document.getElementById("telbtn");
+$body = $("body");
+$sendButton = $("form button");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");   },
+     ajaxStop: function() { 
+         $body.removeClass("loading");
+         $sendButton.prop("disabled", true);
+         $sendButton.removeClass("on");         
+         $sendButton.addClass("off");
+         $sendButton.text("Gesendet!");
+        }
+});
 
 
 // var btn = document.querySelector("form button");

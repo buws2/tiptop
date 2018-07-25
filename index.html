@@ -35,7 +35,7 @@
     <section class="about">
         <h3 class="title" id="about">Über uns</h3>
         <p>
-            TipTop Breil ist ein im Jahr 2017 gegruendetes Unternehmen im Facility Management Bereich. Die Inhaberin ist Kauffrau und die Mitarbeiter sind erfahrene Fachleute im Housekeeping. Schwerpunkt unseres Arbeitsgebietes ist die Betreuung von Ferienimmobilien. Wir wollen Ihnen die Arbeit abnehmen, damit Sie Ihren Urlaub geniessen können.
+            TipTop Breil ist ein im Jahr 2017 gegründetes Unternehmen im Facility Management Bereich. Die Inhaberin ist Kauffrau und die Mitarbeiter sind erfahrene Fachleute im Housekeeping. Schwerpunkt unseres Arbeitsgebietes ist die Betreuung von Ferienimmobilien. Wir wollen Ihnen die Arbeit abnehmen, damit Sie Ihren Urlaub geniessen können.
         </p>
         <hr>
         <ul class="grid">
@@ -74,18 +74,34 @@
     
     <section class="contact">
         <h3 class="title" id="contact"><i class="fas fa-address-card"></i> Kontakt</h3>
-        <p>Scheiben Sie uns noch heute eine Nachricht über die Kontaktform oder rufen Sie uns an.</p>
+        <p>Bei Fragen scheiben Sie uns eine Nachricht über die Kontaktform oder rufen Sie uns an.</p>
         <hr>
-        <p>Gerne machen wir Ihnen ein unverbindliches Angebot.</p>
-<!--        <form method="POST" action="https://us-central1-mailer-service-207217.cloudfunctions.net/function-1"> -->
+        <p>Gerne vereinbaren wir einen Termin mit Ihnen oder machen Ihnen ein unverbindliches Angebot für Ihre individuelle Anfrage.</p>
         <form>
             <input name="name" type="text" placeholder="Name" required>
             <input name="from" type="email" placeholder="Email" required>
             <input name="subject" type="text" placeholder="Betreff">
             <textarea name="message" placeholder="Nachricht"></textarea>
-            <button type="submit btn">Senden <i class="fa fa-arrow-right"></i></button>
-
+            <button type="submit btn" class="on">
+                Senden <i class="fa fa-arrow-right"></i>
+            </button>
         </form>
+        <ul class="grid">
+            <li>
+                <h3>Adresse</h3>
+                <p>
+                    TipTop Breil/Brigels <br>
+                    Frau Barbara Schwab-Wörner <br>
+                    Via Capitasch 9 <br>
+                    CH - 7165 Breil/Brigels
+                </p>
+            </li>
+            <li>
+                <h3>Telefon/Festnetz</h3>
+                <p> +41 81 936 2076</p>
+            </li>
+        </ul>
+        
     </section>
     
     <footer>
@@ -95,7 +111,8 @@
             </p>
             <p>W/ special thanks to <a href="http://www.unsplash.com">unsplash.com</a></p>
         </div>
-        </footer>
+    </footer>
+    <div class="loader"></div>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

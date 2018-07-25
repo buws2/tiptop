@@ -293,8 +293,8 @@ section:not(.hero):nth-child(even) {
     flex: 1;
 }
 
-.contact form button {
-    display: block;
+.on {
+    display: inline-block;
     border-radius: 4px;
     padding: 20px 46px;
     border: none;
@@ -308,13 +308,66 @@ section:not(.hero):nth-child(even) {
     cursor: pointer;
 }
 
-.contact form button:hover {
+.off {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 20px 46px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    opacity: 1;
+    background-color: #555;
+} 
+
+/* LOADER */
+
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* margin: 0 auto; */
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    opacity: 1;
+    border: 16px solid #bdc3c7;
+    width: 100px;
+    height: 100px;
+    border-top-color: #3f51b5;
+    border-bottom-color: #3f51b5;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.loading .loader {
+    overflow: hidden;
+}
+
+body.loading .loader {
+    display: block;
+}
+
+/* LOADER END */
+
+.on:hover {
     background: rgb(0, 37, 139);
 }
 
 .contact .grid li {
     padding: 50px;
-    flex-basis: 33%;
+    flex-basis: 50%;
     text-align: center;
 }
 
