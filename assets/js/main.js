@@ -96,6 +96,10 @@ $(document).on({
         }
 });
 
+var tel = document.getElementById('tel');
+tel.addEventListener('click', () => {
+    tel.textContent = '+41 81 936 2076';
+});
 
 // var btn = document.querySelector("form button");
 // btn.addEventListener("click", sendMsg);
